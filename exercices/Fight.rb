@@ -33,22 +33,22 @@ def stop_script message
   exit
 end
 
-puts "Bienvenue sur Moreau simulator"
-
 player = Player.new "player", 200, 10
 goblin = Entity.new "Goblin", 100, 10
 poulpe = Entity.new "Moreau", 50000, 0.05
+
+puts "Bienvenue sur Moreau simulator"
+puts "Chosis l'une des possibilité suivante\n"
+puts "1 - Attaque le Gobelin, il a encore #{goblin.hp} points de vie."
+puts "2 - Attaque Moreau, elle a encore #{poulpe.hp} points de vie."
+puts "3 - Soigne toi"
+puts "4 - Améliore ton attaque"
+
 
 while player.hp > 0
   if !goblin.alive? && !poulpe.alive?
     stop_script "Bravo, tu a vaincu Moreau la sorcière et son gobelin de compagnie"
   else
-
-    puts "Chosis l'une des possibilité suivante\n"
-    puts "1 - Attaque le Gobelin, il a encore #{goblin.hp} points de vie."
-    puts "2 - Attaque Moreau, elle a encore #{poulpe.hp} points de vie."
-    puts "3 - Soigne toi"
-    puts "4 - Améliore ton attaque"
 
     current_choice = gets.to_i
 
