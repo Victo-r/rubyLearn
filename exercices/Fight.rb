@@ -77,12 +77,11 @@ while player.hp > 0
       puts "Moreau est morte (Ne l'attaque pas, tu perdra un tour)"
     end
 
-    puts "3 - Soigne toi, tu as #{player.hp} points de vie"
-    puts "4 - Améliore ton attaque, elle fais #{player.rank} de dégats"
-
     goblin.attack player
     poulpe.attack player
 
+    puts "3 - Soigne toi, tu as #{player.hp} points de vie"
+    puts "4 - Améliore ton attaque, elle fais #{player.rank} de dégats"
     puts "Il te reste #{player.hp} points de vie et tes attaques font #{player.rank} de dégats \n\n"
   end
 end
